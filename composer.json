@@ -17,11 +17,11 @@
     ],
     "require": {
         "view-components/view-components": "*",
+        "doctrine/dbal": "^2.4",
         "php": "^5.5||^7"
     },
     "require-dev": {
         "view-components/testing-helpers":"^1.8.1",
-        "doctrine/dbal": "^2.4",
         "squizlabs/php_codesniffer": "~2.3"
     },
     "autoload": {

@@ -3,7 +3,7 @@
     "description": "Doctrine ORM support for ViewComponents",
     "keywords": [
         "doctrine",
-        "dbal",
+        "dbal"
     ],
     "homepage": "https://github.com/view-components/doctrine-data-processing",
     "type": "library",

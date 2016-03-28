@@ -1,0 +1,51 @@
+{
+    "name": "view-components/doctrine-data-processing",
+    "description": "Doctrine ORM support for ViewComponents",
+    "keywords": [
+        "doctrine",
+        "dbal",
+    ],
+    "homepage": "https://github.com/view-components/doctrine-data-processing",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vitalii [Nayjest] Stepanenko",
+            "email": "mail@vitaliy.in",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "view-components/view-components": "*",
+        "php": "^5.5||^7"
+    },
+    "require-dev": {
+        "view-components/testing-helpers":"^1.8.1",
+        "doctrine/dbal": "^2.4",
+        "squizlabs/php_codesniffer": "~2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "ViewComponents\\Doctrine\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ViewComponents\\Doctrine\\Test\\Mock\\": "tests/mock/",
+            "ViewComponents\\Doctrine\\Test\\": "tests/phpunit/"
+        }
+    },
+    "scripts": {
+        "post-create-project-cmd": [
+            "ViewComponents\\TestingHelpers\\Installer\\Installer::postComposerInstall"
+        ],
+        "test": "php vendor/phpunit/phpunit/phpunit",
+        "cs": "php vendor/squizlabs/php_codesniffer/scripts/phpcs --standard=psr2 src/"
+    },
+    "support": {
+        "email": "mail@vitaliy.in",
+        "source": "https://github.com/view-components/doctrine-data-processing",
+        "issues": "https://github.com/view-components/doctrine-data-processing/issues"
+    },
+    "minimum-stability": "stable"
+}

@@ -11,6 +11,7 @@ Doctrine ORM support for ViewComponents
 ## Table of Contents
 - [Requirements](#requirements)
 - [Installation](#installation)
+- [Usage](#usage)
 - [Contributing](#contributing)
 - [Testing](#testing)
 - [Security](#security)
@@ -32,6 +33,28 @@ Run following command from your project folder:
 composer require view-components/doctrine-data-processing
 ```
 
+
+## Usage
+
+Code example:
+```php
+use Doctrine\DBAL\Query\QueryBuilder;
+use ViewComponents\Doctrine\DoctrineDataProvider;
+use ViewComponents\ViewComponents\Data\Operation\FilterOperation;
+
+$builder = new QueryBuilder($doctrineConnection);
+$builder
+    ->select('*')
+    ->from('test_users');
+$provider = new DoctrineDataProvider($builder);
+$provider->operations()->add(
+    new FilterOperation('role', FilterOperation::OPERATOR_EQ, 'Manager')
+);
+foreach ($provider as $user) {
+   var_dump($user);
+}
+
+```
 
 ## Contributing
 

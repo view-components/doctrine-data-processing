@@ -16,13 +16,14 @@
         }
     ],
     "require": {
-        "view-components/view-components": "*",
+        "view-components/view-components": ">=0.23.2",
         "doctrine/dbal": "^2.4",
         "php": "^5.5||^7"
     },
     "require-dev": {
-        "view-components/testing-helpers":"^1.8.1",
-        "squizlabs/php_codesniffer": "~2.3"
+        "view-components/testing-helpers":"^1.9",
+        "squizlabs/php_codesniffer": "~2.3",
+        "symfony/var-dumper": "~2||~3"
     },
     "autoload": {
         "psr-4": {
@@ -31,7 +32,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "ViewComponents\\Doctrine\\Test\\Mock\\": "tests/mock/",
+            "ViewComponents\\Doctrine\\Test\\Helper\\": "tests/helpers/",
             "ViewComponents\\Doctrine\\Test\\": "tests/phpunit/"
         }
     },

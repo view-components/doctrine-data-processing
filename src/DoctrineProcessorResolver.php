@@ -12,6 +12,9 @@ use ViewComponents\ViewComponents\Data\ProcessorResolver\ProcessorResolver;
 
 class DoctrineProcessorResolver extends ProcessorResolver
 {
+    /**
+     * Constructor.
+     */
     public function __construct()
     {
         $this

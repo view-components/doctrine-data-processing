@@ -7,9 +7,15 @@ use ViewComponents\ViewComponents\Data\Operation\OperationInterface;
 use ViewComponents\ViewComponents\Data\Operation\PaginateOperation;
 use ViewComponents\ViewComponents\Data\Processor\AbstractPaginateProcessor;
 
+/**
+ * PaginateOperation processing for DoctrineDataProvider.
+ * @see PaginateOperation
+ */
 class PaginateProcessor extends AbstractPaginateProcessor
 {
     /**
+     * Applies operation to data source and returns modified data source.
+     *
      * @param QueryBuilder $src
      * @param OperationInterface|PaginateOperation $operation
      * @return QueryBuilder

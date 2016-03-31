@@ -2,6 +2,7 @@
 
 namespace ViewComponents\Doctrine;
 
+use ArrayIterator;
 use Doctrine\DBAL\Query\QueryBuilder;
 use PDO;
 use Traversable;
@@ -15,7 +16,7 @@ class DoctrineProcessingService extends AbstractProcessingService
      */
     protected function afterOperations($data)
     {
-        return new \ArrayIterator($data->execute()->fetchAll(PDO::FETCH_OBJ));
+        return new ArrayIterator($data->execute()->fetchAll(PDO::FETCH_OBJ));
     }
 
     /**
@@ -28,6 +29,8 @@ class DoctrineProcessingService extends AbstractProcessingService
     }
 
     /**
+     * Returns count of processed items after applying all operations.
+     *
      * @return int
      */
     public function count()

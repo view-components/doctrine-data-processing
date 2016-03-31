@@ -9,6 +9,7 @@ use ViewComponents\ViewComponents\Data\Processor\ProcessorInterface;
 
 /**
  * SortOperation processing for DoctrineDataProvider.
+ *
  * @see SortOperation
  */
 class SortProcessor implements ProcessorInterface

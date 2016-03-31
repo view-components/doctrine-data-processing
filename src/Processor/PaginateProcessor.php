@@ -9,6 +9,7 @@ use ViewComponents\ViewComponents\Data\Processor\AbstractPaginateProcessor;
 
 /**
  * PaginateOperation processing for DoctrineDataProvider.
+ *
  * @see PaginateOperation
  */
 class PaginateProcessor extends AbstractPaginateProcessor

@@ -25,6 +25,6 @@ class PaginateProcessor extends AbstractPaginateProcessor
     {
         return $src
             ->setFirstResult($this->getOffset($operation))
-            ->setMaxResults($this->getOffset($operation));
+            ->setMaxResults($operation->getPageSize());
     }
 }

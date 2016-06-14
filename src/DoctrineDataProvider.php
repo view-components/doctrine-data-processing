@@ -7,7 +7,7 @@ use ViewComponents\ViewComponents\Data\AbstractDataProvider;
 use ViewComponents\ViewComponents\Data\Operation\OperationInterface;
 
 /**
- * Data provider that uses Doctrine query builder as data source.
+ * Data provider that uses Doctrine DBAL query builder as data source.
  */
 class DoctrineDataProvider extends AbstractDataProvider
 {

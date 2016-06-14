@@ -27,7 +27,7 @@ class FilterProcessor implements ProcessorInterface
         $value = $operation->getValue();
         $operator = $operation->getOperator();
         $fieldName = $operation->getField();
-        $parameterName = str_replace(".", "_", $fieldName);// @see https://github.com/Nayjest/Grids/issues/111
+        $parameterName = 'p'. md5($fieldName . $operator);
         $src->andWhere("$fieldName $operator :$parameterName");
         $src->setParameter($parameterName, $value);
         return $src;
